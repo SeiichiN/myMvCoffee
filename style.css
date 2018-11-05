@@ -1,0 +1,549 @@
+/*
+Theme Name: myMvCoffee
+Version: 1.0
+Author: Seiichi Nukayama
+Author URI: http://www.prime-strategy.co.jp/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Description: This is my original theme.
+ */
+
+/* =============== common =================== */
+a {
+    outline: none;
+    color: #40a0d0;
+}
+
+.font-serif,
+.prevnext-nav ul li a {
+    font-family: 'Times New Roman', '游明朝', YuMincho,
+    'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E',
+    'メイリオ', Meiryo, serif;
+}
+
+
+/*
+ * index.php
+ */
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo. sans-serif;
+}
+
+#wrapper {
+    padding-top: 8px;
+    background-image: url(img/bg-wrapper.png);
+    background-repeat: repeat-x;
+}
+
+/* ======================= header ================================= */
+
+.header-logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header-logo a {
+    display: block;
+    width: 159px;
+    height: 59px;
+    background-color: #fff;
+    background-image: url(img/sprite.png);
+    background-repeat: no-repeat;
+}
+
+/* ===================== navigation =================================== */
+
+.global-nav {
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+    color: #806b1c;
+    font-family: 'Times New Roman', '游明朝', Yumincho, 'G明朝E', 'メイリオ', Meiryo, serif;
+}
+
+.global-nav .icon-home,
+.global-nav .icon-news,
+.global-nav .icon-menu,
+.global-nav .icon-access,
+.global-nav .icon-gallery,
+.global-nav .icon-blog {
+    width: 27px;
+    height: 27px;
+    background-image: url(img/sprite.png);
+}
+.global-nav .icon-home {
+    background-position: -186px -34px;
+}
+.global-nav .icon-news {
+    background-position: -186px -88px;
+}
+.global-nav .icon-menu {
+    background-position: -159px -34px;
+}
+.global-nav .icon-access {
+    background-position: -186px -88px;
+}
+.global-nav .icon-gallery {
+    background-position: -159px -61px;
+}
+.global-nav .icon-blog {
+    background-position: -186px -61px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+    .global-nav .icon-home,
+    .global-nav .icon-news,
+    .global-nav .icon-menu,
+    .global-nav .icon-access,
+    .global-nav .icon-gallery,
+    .global-nav .icon-blog {
+        background-image: url(../img/sprite-2x.png);
+        -moz-background-size: 239px 215px;
+        background-size: 239px 215px;
+    }
+}
+
+
+.global-nav .icon {
+    display-inline-block;
+    margin: 0 auto;
+}
+
+.global-nav__toggle {
+    padding: 11px 0.6em;
+    width: 100%;
+    border: solid 1px transparent;
+    background: transparent;
+}
+
+.global-nav__list {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type:none;
+}
+
+.global-nav__list li {
+    float: left;
+    width: 50%;
+    border-top: solid 1px #eee;
+}
+
+.global-nav__list li a {
+    display: block;
+    padding: 11px 0.6em;
+    padding-top: 11px;
+    color: #baac2a;
+    text-align: left;
+}
+
+.global-nav__list li a:nth-child(2n+1) {
+    border-right: solid 1px #eee;
+}
+
+.global-nav__list li a .icon {
+    margin-right: 10px;
+    width: 27px;
+    height: 27px;
+    vertical-align: middle;
+}
+
+
+/* ======================= main visual ======================================= */
+
+.mainvisual {
+    position: relative;
+    background-color: #fff;
+    background-image: url(img/img-home-mainvisual.jpg);
+    background-position: center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.page-title {
+    padding: 10px 20px 0;
+    height: 120px;
+}
+
+.page-title h2 {
+    margin: 0;
+}
+
+.home-nav__title {
+    margin-bottom: 1.2em;
+    height: 46px;
+    background-image: url('img/bg-home-nav__title.png');
+    background-position: center top;
+    -moz-background-size: 78px 46px;
+    background-size: 78px 46px;
+    background-repeat: repeat-x;
+}
+
+.home-nav__title h2 {
+    margin-top: 0;
+    padding-top: .3em;
+    font-size: 1.6em;
+}
+
+.home-nav .container {
+    position: relative;
+    z-index: 1;
+}
+
+.home-nav__list {
+    margin-bottom: 10px;
+}
+
+.home-nav__list li {
+    margin-bottom: 20px;
+}
+
+.home-nav__thumbnail {
+    float: left;
+    width: 33%;
+}
+
+.home-nav__list a {
+    display: block;
+}
+
+.home-nav__text {
+    float: left;
+    padding-right: 10px;
+    padding-left: 20px;
+    width: 66%;
+}
+
+.home-nav__list h2 {
+    margin: 0.4em 0;
+}
+
+.home-nav__cafe h2 a {
+    width: 82px;
+    height: 28px;
+    background-image: url(img/sprite.png);
+    background-position: 0px -187px;
+}
+
+.home-nav__lunch h2 a {
+    width: 116px;
+    height: 28px;
+    background-image: url(img/sprite.png);
+    background-position: 0px -87px;
+}
+
+.home-nav__dinner h2 a {
+    width: 133px;
+    height: 28px;
+    background-image: url(img/sprite.png);
+    background-position: 0px -59px;
+}
+
+.home-postlist {
+    padding-top: 20px;
+    padding-bottom: 1em;
+}
+
+.home-postlist__title {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.home-postlist__title h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-image: url(img/bg-section-title.png);
+    background-position: center;
+    -moz-background-size: 100px 100px;
+    background-size: 100px 100px;
+    color: #fff;
+    font-size: 1.6em;
+    line-height: 40px;
+}
+
+.home-postlist .entry {
+    margin-bottom: 40px;
+}
+
+.entry {
+    margin-bottom: 20px;
+    border-bottom: dotted 1px #555;
+}
+
+.entry--simple {
+    position: relative;
+    border-bottom: none;
+}
+
+.entry-thumbnail {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.entry-thumbnail a {
+    display: block;
+}
+
+.entry__new-mark {
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+    display: inline-block;
+    padding: 5px 5px 5px 10px;
+    height: 22px;
+    background-color: #f48fa5;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8em;
+    line-height: 1;
+}
+
+.entry-meta {
+    font-size: 0.9em;
+}
+
+.entry-meta .glyphicon {
+    margin-right: 0.8em;
+}
+
+.entry-title {
+    position: relative;
+    margin-top: 0;
+    padding: 0.6em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-image: url(img/bg-section-title.jpg);
+    color: #fff;
+    word-wrap: break-word;
+    font-weight: bold;
+    behavior: url(/wp-content/themes/myMvCoffee/js/PIC.htc);
+    behavior: url(js/PIC.htc);
+}
+
+.entry-title a {
+    color: #fff;
+}
+
+.entry--simple .entry-title {
+    padding: 0;
+    background: none;
+}
+
+.entry--simple .entry-title a {
+    color: #333;
+}
+
+.home-postlist .entry-content {
+    padding: 0;
+}
+
+.entry-content {
+    word-wrap: braak-word;
+}
+
+.entry-content p {
+    font-size: 1em;
+}
+
+.entry--excerpt .entry-content p {
+    font-size: 0.9em;
+}
+
+.entry-more {
+    position: relative;
+}
+
+.entry-more a {
+    display: block;
+    padding: 6.66667px 0;
+    border: solid 1px #333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.entry-more a span {
+    display: block;
+    margin: 0 auto;
+    width: 123px;
+    height: 19px;
+    background-image: url(img/sprite.png);
+    background-position: 0px -149px;
+}
+
+
+
+.img-thumbnail {
+    position: relative;
+}
+
+
+/*************************************************
+ *  768px
+ *************************************************/
+@media screen and (min-width: 768px) {
+    .global-nav {
+        float: right;
+        border: none;
+    }
+
+    .global-nav .collapse {
+        display: block;
+    }
+
+    .global-nav__list {
+        border-left: solid 1px #eee;
+    }
+
+    .global-nav__list li {
+        float: left;
+        width: 85px;
+    }
+
+    .global-nav__list li a {
+        padding-top: 22px;
+        width: 85px;
+        height: 85px;
+        border-right: solid 1px #eee;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .global-nav__list li a .icon {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .home-nav {
+        background:
+            url(img/bg-main--before.png) left 100px no-repeat,
+            url(img/bg-main--after.png) right 100px no-repeat,
+            #ffffff;
+    }
+
+    .home-nav__title {
+        margin-bottom: 1.2em;
+        height: 93px;
+        -moz-background-size: auto;
+        background-size: auto;
+    }
+    .home-nav__title h2 {
+        padding-top: .6em;
+        font-size: 2.4em;
+    }
+
+    .home-nav__thumbnail {
+        float: none;
+        width: 100%;
+    }
+
+    .home-nav__list a {
+        margin: 0 auto;
+    }
+
+    .home-nav__list a .img-thumbnail {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    .img-thumbnail {
+        position: relative;
+    }
+
+    .home-nav__text {
+        float: none;
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .home-nav__list h2 {
+        margin: 20px 0;
+    }
+
+    .home-postlist {
+        padding-top: 40px;
+    }
+
+    .home-postlist__title {
+        margin-bottom: 40px;
+    }
+
+    .home-postlist__title h2 {
+        background-image: url(img/bg-section-title.png);
+        background-position: center;
+        -moz-background-size: auto;
+        background-size: auto;
+        background-repeat: no-repeat;
+        font-size: 2.4em;
+        line-height: 60px;
+    }
+
+    .home-postlist .entry {
+        min-height: 410px;
+    }
+
+    .entry__new-mark {
+        padding: 9px 10px;
+        height: 30px;
+        font-size: 1em;
+    }
+
+    .entry-more {
+        position: absolute;
+        bottom: 0;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    
+}
+
+/**********************************************************
+ *  992px
+ **********************************************************/
+@media screen and (min-width: 992px) {
+    .header-logo {
+        margin-top: 20px;
+    }
+
+    .global-nav__list li {
+        width: 100px;
+    }
+
+    .global-nav__list li a {
+        padding-top: 22px;
+        width: 100px;
+        height: 95px;
+    }
+
+    .page-title {
+        height: auto;
+    }
+
+    #wrap-container {
+        background:
+            url(img/bg-main--before.png) left 100px no-repeat,
+            url(img/bg-main--after.png) right 100px no-repeat,
+            #ffffff url(img/bg-home-postlist.jpg) repeat;
+    }
+}
+
+/**********************************************************
+ *  1200px
+ **********************************************************/
+@media screen and (min-width: 1200px) {
+    .home-postlist .entry {
+        min-height: 440px;
+    }
+}
+
