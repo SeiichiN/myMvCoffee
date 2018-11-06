@@ -320,8 +320,6 @@ body {
     color: #fff;
     word-wrap: break-word;
     font-weight: bold;
-    behavior: url(/wp-content/themes/myMvCoffee/js/PIC.htc);
-    behavior: url(js/PIC.htc);
 }
 
 .entry-title a {
@@ -342,7 +340,7 @@ body {
 }
 
 .entry-content {
-    word-wrap: braak-word;
+    word-wrap: braak-word;  // 強制改行
 }
 
 .entry-content p {
@@ -426,7 +424,7 @@ body {
 }
 
 .home-news__content {
-    margin: 0;
+    margin: 0;  // 文字の間隔
     width: 65%;
     font-size: 0.8em;
     line-height: 1.7;
@@ -488,7 +486,7 @@ body {
     margin-bottom: 0;
     padding-left: 0;
     list-style-type: none;
-    letter-spacing: -.40em;
+    letter-spacing: -.40em;  // 文字の間隔
 }
 
 .footer__social ul li {
