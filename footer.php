@@ -1,5 +1,4 @@
 
-  </main>
 
   <footer id="footer" class="footer">
 
@@ -9,18 +8,19 @@
 
     <div class="footer__social">
       <ul class="text-center clearfix">
-        <li><a href="https://www.facebook.com/wp.business.book" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/btn-facebook.png" alt="Facebook"/></a></li>
-        <li><a href="#" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/btn-twitter.png" alt="Twitter"/></a></li>
-        <li><a href="#" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/btn-instagram.png" alt="instagram"/></a></li>
+        <li><a href="https://www.facebook.com/wp.business.book" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri());; ?>/img/btn-facebook.png" alt="Facebook"/></a></li>
+        <li><a href="#" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/btn-twitter.png" alt="Twitter"/></a></li>
+        <li><a href="#" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/btn-instagram.png" alt="instagram"/></a></li>
       </ul>
     </div>
 
     <div class="footer__copyright">
-      <p class="text-center"><small>Copyright &copy; MaverickCoffee</small></p>
+      <p class="text-center"><small>Copyright &copy; <?php bloginfo('name'); ?></small></p>
     </div>
 
   </footer>
 
+  <?php wp_footer(); ?>
 </div>
 
 <!--

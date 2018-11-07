@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+  <main id="wrap-container" role="main">
+
     <nav id="home-nav" class="home-nav">
       <div class="home-nav__title">
         <h2 class="text-center font-serif">MENU</h2>
@@ -9,28 +11,28 @@
         <ul class="home-nav__list row list-unstyled">
           <li class="home-nav__cafe col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-cafe"><img src="<?php echo get_template_directory_uri() ?>/img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="<?php echo esc_url(home_url('/menu#menu-cafe')); ?>"><img src="<?php echo get_template_directory_uri() ?>/img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
-              <h2><a href="./menu.html#menu-cafe" class="text-hide">CAFE</a></h2>
+              <h2><a href="<?php echo esc_url(home_url('/menu#menu-cafe')); ?>" class="text-hide">CAFE</a></h2>
               <p>シェフの焼く絶品のパンと、バリスタの入れるコーヒーでリフレッシュする贅沢をお楽しみください。</p>
             </div>
           </li>
           <li class="home-nav__lunch col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-lunch"><img src="<?php echo get_template_directory_uri() ?>/img/nav-lunch.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="<?php echo esc_url(home_url('/menu#menu-lunch')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-lunch.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
-              <h2><a href="./menu.html#menu-lunch" class="text-hide">LUNCH</a></h2>
+              <h2><a href="<?php echo esc_url(home_url('/menu#menu-lunch')); ?>" class="text-hide">LUNCH</a></h2>
               <p>おいしい野菜を使った、元気になれるメニューがいっぱい！平日のランチはもちろん、お休みの日にも美味しいランチタイムをお楽しみください。</p>
             </div>
           </li>
           <li class="home-nav__dinner col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-dinner"><img src="<?php echo get_template_directory_uri() ?>/img/nav-dinner.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="<?php echo esc_url(home_url('/menu#menu-dinner')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-dinner.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
-              <h2><a href="./menu.html#menu-dinner" class="text-hide">DINNER</a></h2>
+              <h2><a href="<?php echo esc_url(home_url('/menu#menu-dinner')); ?>" class="text-hide">DINNER</a></h2>
               <p>すべて直送で新鮮な食材で、四季折々の旬の味をお楽しみいただけます。本格的なお料理をゆっくりとご堪能ください。</p>
             </div>
           </li>
@@ -48,7 +50,7 @@
 
           <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
             <div class="entry-thumbnail">
-              <a href="#"><span class="entry__new-mark">NEW</span><img src="<?php echo get_template_directory_uri() ?>/img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail"/></a>
+              <a href="#"><span class="entry__new-mark">NEW</span><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail"/></a>
             </div>
             <div class="entry-meta">
               <div class="entry-meta__time">
@@ -64,7 +66,7 @@
 
           <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
             <div class="entry-thumbnail">
-              <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/demo/img-postlist-008.jpg" alt="" class="img-thumbnail"/></a>
+              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/demo/img-postlist-008.jpg" alt="" class="img-thumbnail"/></a>
             </div>
             <div class="entry-meta">
               <div class="entry-meta__time">
@@ -80,7 +82,7 @@
 
           <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
             <div class="entry-thumbnail">
-              <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/demo/img-postlist-003.jpg" alt="" class="img-thumbnail"/></a>
+              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/demo/img-postlist-003.jpg" alt="" class="img-thumbnail"/></a>
             </div>
             <div class="entry-meta">
               <div class="entry-meta__time">
@@ -96,7 +98,7 @@
 
           <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
             <div class="entry-thumbnail">
-              <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/demo/img-postlist-004.jpg" alt="" class="img-thumbnail"/></a>
+              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/demo/img-postlist-004.jpg" alt="" class="img-thumbnail"/></a>
             </div>
             <div class="entry-meta">
               <div class="entry-meta__time">
@@ -160,7 +162,7 @@
               <h3 class="text-center font-serif">ACCESS</h3>
             </div>
             <div class="home-map__img">
-              <img src="<?php echo get_template_directory_uri() ?>/img/img-home-utilities__map.png" alt="" class="img-responsive" />
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img-home-utilities__map.png" alt="" class="img-responsive" />
             </div>
             <address class="home-map__address address">
               <p class="address__name">Maverick Coffee</p>
@@ -177,6 +179,7 @@
       </div>
 
     </div>
+  </main>
 
     <?php get_footer(); ?>
     

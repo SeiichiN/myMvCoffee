@@ -29,7 +29,7 @@ a {
 body {
     background-color: #fff;
     color: #333;
-    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo. sans-serif;
+    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
 
 #wrapper {
@@ -106,7 +106,7 @@ body {
 
 
 .global-nav .icon {
-    display-inline-block;
+    display: inline-block;
     margin: 0 auto;
 }
 
@@ -340,7 +340,7 @@ body {
 }
 
 .entry-content {
-    word-wrap: braak-word;  // 強制改行
+    word-wrap: braak-word;  /* 強制改行 */
 }
 
 .entry-content p {
@@ -424,7 +424,7 @@ body {
 }
 
 .home-news__content {
-    margin: 0;  // 文字の間隔
+    margin: 0;       /* 文字の間隔 */
     width: 65%;
     font-size: 0.8em;
     line-height: 1.7;
@@ -486,7 +486,7 @@ body {
     margin-bottom: 0;
     padding-left: 0;
     list-style-type: none;
-    letter-spacing: -.40em;  // 文字の間隔
+    letter-spacing: -.40em;       /* 文字の間隔 */
 }
 
 .footer__social ul li {

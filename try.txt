@@ -1,6 +1,37 @@
+1) テーマに必要なファイル
+
+	index.php -- 空でもよい。
+	style.css -- テーマとしての宣言を冒頭のコメントの中に記述する。
+	screenshot.png -- テーマの選択時にこの画像が表示される。
+	                  880px X 660px
+
+2) パスを修正する。
+
+	<?php echo get_stylesheet_uri(); ?>
+		=> http://XXXXXXXXXXXXX/wp-content/themes/style.css
+
+    <?php echo get_template_directory_uri(); ?>
+		=> http://XXXXXXXXXXXX/wp-content/themes/myMvCoffee/
+
+3) テンプレートを分割する
 
 index.php から header.php footer.php をつくる。
 
-index.php に <?php get_header(); ?> <?php get_footer(); ?> をつくる。
+index.php に header.php を読み込むところに <?php get_header(); ?> を記述する。
+また、footer.php を読み込むところに <?php get_footer(); ?> を記述する。
 
+4) テンプレートタグを追加する
+
+<title><?php bloginfo('name'); ?></title>  // サイトのタイトルを表示
+
+......
+
+<?php wp_head(); ?>                        // <head>の終わりを明示
+</head>
+
+......
+
+<?php bloginfo('description'); ?>          // サイトの概要を表示
+
+<?php bloginfo('name'); ?>                 // サイト名を表示するところに記述（リンク先）
 
