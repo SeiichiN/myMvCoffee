@@ -26,7 +26,14 @@ index.php に header.php を読み込むところに <?php get_header(); ?> を�
 
 ......
 
-<?php wp_head(); ?>                        // <head>の終わりを明示
+<?php wp_head(); ?>             // <head>の終わりを明示
+                                // <!--[if lt IE 9]> より前に記述する
+  <!--[if lt IE 9]>
+  <meta http-equiv="Imagetoolbar" content="no" />
+  <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/html5shiv.min.js"></script>
+  <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/respond.min.js"></script>
+  <![endif]-->
+
 </head>
 
 ......
@@ -35,3 +42,57 @@ index.php に header.php を読み込むところに <?php get_header(); ?> を�
 
 <?php bloginfo('name'); ?>                 // サイト名を表示するところに記述（リンク先）
 
+......
+
+<?php language_attributes(); ?>            // lang="ja"
+
+<?php bloginfo('carset'); ?>               // charset="utf-8"
+
+
+5) 個別投稿ページ（single.php）を作成する。
+
+single.html を single.php とする。
+
+header 部分 footer 部分をそれぞれ、get_header()、get_footer() に置き換える。
+
+
+<main id="main-col" class="col-xs-12 col-md-9" role="main">
+    <div class="main-col__inner">
+
+
+   </div><!-- class="main-col__inner" -->
+</main><!-- id="main-col" class="col-xs-12 col-md-9" role="main" -->
+
+の内側に、while(have_port() 〜 endwhile を入れる。
+
+<main id="main-col" class="col-xs-12 col-md-9" role="main">
+    <div class="main-col__inner">
+
+        <?php while (have_posts()) : ?>
+              <?php the_post(); ?>
+
+              <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+              <!--  <article id="post-1" class="entry post-1 post type-post status-publish format-standard hentry category-1"> が出力される -->
+
+                  ... メイン記事がはいる ...
+                  
+              </article>
+
+              <aside class="recommend">
+
+                  ... 関連記事がはいる ...
+
+              </aside>
+
+              <!-- page-navigation -->
+              <nav class="prevnext-nav">
+                  <ul class="list-inline clearfix">
+                      <li class="prevnext-nav__left pull-left"><a class="text-left font-serif" href="#">PREV</a></li>
+                      <li class="prevnext-nav__right pull-right"><a class="text-right font-serif" href="#">NEXT</a></li>
+                  </ul>
+              </nav>
+
+        <?php endwhile; ?>
+
+   </div><!-- class="main-col__inner" -->
+</main><!-- id="main-col" class="col-xs-12 col-md-9" role="main" -->
