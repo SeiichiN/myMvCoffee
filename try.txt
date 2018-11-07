@@ -1,0 +1,6 @@
+
+index.php から header.php footer.php をつくる。
+
+index.php に <?php get_header(); ?> <?php get_footer(); ?> をつくる。
+
+
